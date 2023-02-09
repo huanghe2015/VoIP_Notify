@@ -1,3 +1,7 @@
+# TTS Temproray folder
+voice/
+# History Folder
+.history/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

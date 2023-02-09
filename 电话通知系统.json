@@ -1,1 +1,43 @@
-{"name":"电话通知系统","master":true,"version":"0.0.1","description":"用户注册登录后购买点数，通过API调用使用通知。\n首先检查点数是否充足。\nAPI调用成功后扣除点数。\n首先API将电话通知的请求信息写入TTS队列。\nTTS队列有一个监控程序，监控到TTS队列中有请求时将信息提取出来，然后将信息做TTS转换，失败则重试，转换出语音后将信息写入通知队列。\n通知队列有一个监控程序，监控到通知队列有请求时将语音等信息提取出来，然后拨打信息中的号码，挂机等失败情况则将其放入队尾等待再次通知，成功则播放语音，播放语音结束后挂断。\n全部流程结束。","schemas":{"fe906927-e96e-4685-8979-8ac6b40b1cd5":{"_id":"fe906927-e96e-4685-8979-8ac6b40b1cd5","_name":"用户","_inherit":["_Component"],"Username":"property"}},"models":{"fd2ae743-864c-4960-8d25-39fbf0500499":{"_id":"fd2ae743-864c-4960-8d25-39fbf0500499","_name":"用户","_description":"","Username":{"description":"","type":"any","readOnly":false,"mandatory":false,"default":""}}},"behaviors":{"f7899eac-f15d-4c21-a258-dcb9ee96fa97":{"_id":"f7899eac-f15d-4c21-a258-dcb9ee96fa97","component":"a058b6a9-afae-4957-91f6-2d8f5626b911","state":"start","action":"function start() { \n  \n}","useCoreAPI":false,"core":false}},"types":{},"components":{},"_id":"a058b6a9-afae-4957-91f6-2d8f5626b911"}
+{
+    "name": "电话通知系统",
+    "master": true,
+    "version": "0.0.1",
+    "description": "用户注册登录后购买点数，通过API调用使用通知。\n首先检查点数是否充足。\nAPI调用成功后扣除点数。\n首先API将电话通知的请求信息写入TTS队列。\nTTS队列有一个监控程序，监控到TTS队列中有请求时将信息提取出来，然后将信息做TTS转换，失败则重试，转换出语音后将信息写入通知队列。\n通知队列有一个监控程序，监控到通知队列有请求时将语音等信息提取出来，然后拨打信息中的号码，挂机等失败情况则将其放入队尾等待再次通知，成功则播放语音，播放语音结束后挂断。\n全部流程结束。",
+    "schemas": {
+        "fe906927-e96e-4685-8979-8ac6b40b1cd5": {
+            "_id": "fe906927-e96e-4685-8979-8ac6b40b1cd5",
+            "_name": "用户",
+            "_inherit": [
+                "_Component"
+            ],
+            "Username": "property"
+        }
+    },
+    "models": {
+        "fd2ae743-864c-4960-8d25-39fbf0500499": {
+            "_id": "fd2ae743-864c-4960-8d25-39fbf0500499",
+            "_name": "用户",
+            "_description": "",
+            "Username": {
+                "description": "",
+                "type": "any",
+                "readOnly": false,
+                "mandatory": false,
+                "default": ""
+            }
+        }
+    },
+    "behaviors": {
+        "f7899eac-f15d-4c21-a258-dcb9ee96fa97": {
+            "_id": "f7899eac-f15d-4c21-a258-dcb9ee96fa97",
+            "component": "a058b6a9-afae-4957-91f6-2d8f5626b911",
+            "state": "start",
+            "action": "function start() { \n  \n}",
+            "useCoreAPI": false,
+            "core": false
+        }
+    },
+    "types": {},
+    "components": {},
+    "_id": "a058b6a9-afae-4957-91f6-2d8f5626b911"
+}
