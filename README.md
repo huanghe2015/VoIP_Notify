@@ -21,5 +21,7 @@
 ## 技术选型
 
 TTS：EdgeTTS
+
 Web框架：Flask
+
 消息队列：
